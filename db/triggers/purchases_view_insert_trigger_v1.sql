@@ -1,0 +1,3 @@
+CREATE TRIGGER purchases_view_insert_trigger_v1
+INSTEAD OF INSERT ON purchases_view
+FOR EACH ROW EXECUTE PROCEDURE purchases_view_insert_trigger_procedure_v1()
