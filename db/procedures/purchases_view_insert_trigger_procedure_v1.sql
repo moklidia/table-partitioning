@@ -16,9 +16,7 @@ BEGIN
   end_date           := start_date + interval '1 month';
   partition          := 'partitioned_purchases' || '_' || partition_year || '_' || partition_month;
 
-  /*
-  Create a child table, if necessary. Announce it to all interested parties.
-  */
+  /* Create a child table, if necessary */
 
   IF NOT EXISTS(SELECT relname FROM pg_class WHERE relname = partition) THEN
 

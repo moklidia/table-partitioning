@@ -6,6 +6,6 @@ class CreatePurchasesView < ActiveRecord::Migration[6.1]
       ALTER COLUMN id
       SET DEFAULT nextval('purchases_id_seq'::regclass)"
 
-    ActiveRecord::Base.connection.execute(sql)
+    execute(sql)
   end
 end
